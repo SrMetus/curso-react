@@ -13,14 +13,21 @@ export const CounterApp = ({value}) => {
         setCount((prevCount) => prevCount + 1);
     };
     
+    const handleDel = () => {
+        setCount((prevCount) => prevCount -1);
+    };
+
+    const handleReset = () => {
+        setCount(value);
+    };
 
     return (
         <>
             <h1>Counter App</h1>
             <h2> {count} </h2>
-            <button onClick={handleAdd}>
-                +1
-            </button>
+            <button onClick={handleAdd}>+1</button>
+            <button onClick={handleDel}>-1</button>
+            <button onClick={handleReset}>Reset</button>
         </>
     );
 };
