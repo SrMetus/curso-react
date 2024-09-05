@@ -14,7 +14,9 @@
 //     date.getSeconds()
 // ];
 
-export const FirstApp = ({title, subtitle}) => {
+import PropTypes from 'prop-types';
+
+export const FirstApp = ({title, subTitle}) => {
 
     return (
         <>
@@ -23,7 +25,12 @@ export const FirstApp = ({title, subtitle}) => {
             <h1>{newMessage}</h1>
             <code>{JSON.stringify(newMessage2)}</code> 
             <p>Soy un subtitulo</p>*/}
-            <p>{subtitle * 2}</p>
+            <p>{subTitle}</p>
         </>
     )
-};
+}
+
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.number.isRequired
+}
