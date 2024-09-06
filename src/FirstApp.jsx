@@ -20,7 +20,7 @@ export const FirstApp = ({title, subTitle, name}) => {
 
     return (
         <>
-            <div data-testid="test-title">{title}</div>
+            <h1 data-testid="test-title">{title}</h1>
             {/* <h2>{`${day}-${month}-${year} at ${hour}:${minute}:${second}`}</h2>
             <h1>{newMessage}</h1>
             <code>{JSON.stringify(newMessage2)}</code> 
